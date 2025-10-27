@@ -1,0 +1,104 @@
+---
+
+---
+
+<canvas
+   id="particles-canvas"
+   class="absolute inset-0 pointer-events-none opacity-80"
+   style="z-index:1;"></canvas>
+
+<script>
+   interface Particle {
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      opacity: number;
+      color: string;
+   }
+   const canvas = document.getElementById(
+      'particles-canvas'
+   ) as HTMLCanvasElement;
+   const ctx = canvas?.getContext('2d')!;
+
+   let particles: Particle[] = [];
+   let animationId: number;
+
+   function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+   }
+
+   function initParticles() {
+      particles = [];
+      const particleCount = Math.min(50, Math.floor(window.innerWidth / 20));
+
+      for (let i = 0; i < particleCount; i++) {
+         particles.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            vx: (Math.random() - 0.5) * 0.5,
+            vy: (Math.random() - 0.5) * 0.5,
+            size: Math.random() * 2 + 1,
+            opacity: Math.random() * 0.5 + 0.1,
+            color: Math.random() > 0.5 ? '#ff8904' : '#f3f3f3',
+         });
+      }
+   }
+
+   function animate() {
+      ctx?.clearRect(0, 0, canvas.width, canvas.height);
+
+      particles.forEach((p, i) => {
+         p.x += p.vx;
+         p.y += p.vy;
+
+         if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+         if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+         p.x = Math.max(0, Math.min(canvas.width, p.x));
+         p.y = Math.max(0, Math.min(canvas.height, p.y));
+
+         ctx.beginPath();
+         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+         ctx.fillStyle = p.color;
+         ctx.globalAlpha = p.opacity;
+         ctx.fill();
+
+         particles.forEach((other, j) => {
+            if (i !== j) {
+               const dx = p.x - other.x;
+               const dy = p.y - other.y;
+               const dist = Math.sqrt(dx * dx + dy * dy);
+
+               if (dist < 100) {
+                  ctx.beginPath();
+                  ctx.moveTo(p.x, p.y);
+                  ctx.lineTo(other.x, other.y);
+                  ctx.strokeStyle = '#ff8904';
+                  ctx.globalAlpha = ((100 - dist) / 100) * 0.1;
+                  ctx.lineWidth = 0.5;
+                  ctx.stroke();
+               }
+            }
+         });
+      });
+
+      ctx.globalAlpha = 1;
+      animationId = requestAnimationFrame(animate);
+   }
+
+   resizeCanvas();
+   initParticles();
+   animate();
+
+   window.addEventListener('resize', () => {
+      resizeCanvas();
+      initParticles();
+   });
+
+   window.addEventListener('beforeunload', () => {
+      if (animationId) cancelAnimationFrame(animationId);
+   });
+</script>

@@ -1,0 +1,151 @@
+---
+import { cv } from '@/data/data';
+import { Icon } from 'astro-icon/components';
+import Background from '@/components/Background.astro';
+
+const {
+   basics: {
+      name,
+      summary,
+      profiles,
+      label,
+      email,
+      location: { country, countryCode },
+   },
+} = cv;
+---
+
+<section
+   id="resumen"
+   class="relative min-h-screen overflow-hidden lg:pt-28 pt-24 pb-10"
+>
+   <div class="absolute inset-0">
+      <Background />
+
+      <div
+         class="absolute inset-0 opacity-5
+         bg-[linear-gradient(var(--color-third)_1px,transparent_1px),linear-gradient(90deg,var(--color-third)_1px,transparent_1px)]
+         bg-size-[50px_50px]"
+      >
+      </div>
+   </div>
+
+   <div
+      class="relative z-10 flex min-h-[calc(100vh-5rem)] items-center px-4 sm:px-6 lg:px-8 pt-8"
+   >
+      <div
+         class="mx-auto grid max-w-7xl grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center"
+      >
+         <div>
+            <div class="flex justify-center lg:justify-start mb-8">
+               <div
+                  class="inline-flex items-center gap-2 rounded-full px-4 py-2 backdrop-blur-sm
+                     bg-[rgba(255,137,4,0.1)] border border-[rgba(255,137,4,0.3)]"
+               >
+                  <Icon
+                     name="circle"
+                     size={8}
+                     class="animate-pulse fill-current text-third"
+                  />
+                  <span class="text-sm font-medium text-third">
+                     Disponible para trabajar
+                  </span>
+               </div>
+            </div>
+
+            <div class="mb-6 text-center lg:text-start">
+               <h1
+                  class="mb-2 text-4xl font-bold sm:text-5xl lg:text-6xl text-primary"
+               >
+                  {name}
+               </h1>
+               <h2
+                  class="md:text-2xl text-xl font-semibold sm:text-3xl text-third drop-shadow-[0_0_6px_#ff8904]"
+               >
+                  {label}
+               </h2>
+            </div>
+
+            <div class="mb-8 space-y-4 text-center lg:text-start">
+               <p class="text-lg leading-relaxed text-secondary">
+                  {summary.p1}
+                  <span class="font-semibold text-primary">
+                     {summary.p2}
+                  </span>
+               </p>
+               <p class="text-base leading-relaxed text-secondary">
+                  {summary.p3}
+               </p>
+            </div>
+
+            <div
+               class="mb-8 flex items-center gap-2 text-secondary place-self-center lg:place-self-start"
+            >
+               <Icon name="map-pin" size={16} />
+               <span>
+                  {country},
+                  <span class="text-third ml-2">{countryCode}</span>
+               </span>
+            </div>
+
+            <div
+               class="mb-8 flex flex-wrap gap-4 justify-center lg:justify-start"
+            >
+               <a
+                  href={`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`}
+                  id="sendmail"
+                  title={`Enviar correo electronico a Fabrizio al correo ${email}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group flex items-center gap-3 rounded-lg px-4 py-3 transition-all duration-300 hover:scale-105 bg-background-card border border-border hover:border-third hover:bg-[rgba(255, 137, 4, 0.05)]"
+               >
+                  <Icon
+                     name="mail"
+                     class="h-5 w-5 transition-colors group-hover:text-white text-third"
+                  />
+                  <span
+                     class="font-medium transition-colors group-hover:text-white text-primary"
+                  >
+                     Enviar Correo
+                  </span>
+               </a>
+               {
+                  profiles.map(({ icon, url, name }) => (
+                     <a
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="group flex items-center gap-3 rounded-lg px-4 py-3 transition-all duration-300 hover:scale-105 bg-background-card border border-border hover:border-third hover:bg-[rgba(255, 137, 4, 0.05)]"
+                     >
+                        <Icon
+                           name={icon}
+                           class="h-5 w-5 transition-colors group-hover:text-white text-third"
+                        />
+                        <span class="font-medium transition-colors group-hover:text-white text-primary">
+                           {name}
+                        </span>
+                     </a>
+                  ))
+               }
+            </div>
+         </div>
+
+         <div class="hidden lg:flex lg:justify-end">
+            <Icon name="programmer" size={500} />
+         </div>
+      </div>
+   </div>
+</section>
+
+<script>
+   const sendMailBtn = document.getElementById('sendmail') as HTMLAnchorElement;
+
+   sendMailBtn?.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.open(
+         sendMailBtn.href,
+         'gmailWindow',
+         'width=800,height=600,scrollbars=yes,resizable=yes'
+      );
+   });
+</script>

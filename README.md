@@ -1,46 +1,45 @@
-# Astro Starter Kit: Basics
+# Fabrizio Gutiérrez - Full-Stack Web Developer
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+¡Hola! 👋 Soy **Fabrizio Gutiérrez**, Ingeniero de Sistemas y Desarrollador Full-Stack con más de 1 año de experiencia creando aplicaciones web completas. Mi pasión está en combinar lógica backend robusta con interfaces modernas y funcionales, con especial enfoque en el desarrollo frontend.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Sobre Mí
 
-## 🚀 Project Structure
+-  🎓 **Ingeniero de Sistemas** - UNEFA (2019-2024)
+-  💼 **Full-Stack Developer** con experiencia en desarrollo web
+-  📍 **Ubicación**: Falcón, Venezuela
+-  🌐 **Idiomas**: Español (Nativo), Inglés (B1)
 
-Inside of your Astro project, you'll see the following folders and files:
+> _"Mi fortaleza está en el desarrollo frontend, donde disfruto construir interfaces intuitivas, eficientes y fáciles de usar, siempre alineadas con la lógica del sistema."_
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+## 🛠️ Tecnologías y Habilidades
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+### **Frontend**
 
-## 🧞 Commands
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-All commands are run from the root of the project, from a terminal:
+### **Backend & Bases de Datos**
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
 
-## 👀 Want to learn more?
+### **Herramientas**
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
+
+## 📜 Certificaciones
+
+-  **Programación Básica** - Platzi (2022)
+-  **Master JavaScript with Node.js** - Udemy (2024)
+-  **Tailwind CSS Start to Mastery** - Udemy (2024)
+
+---
+
+_¿Interesado en colaborar? No dudes en contactarme para oportunidades profesionales o proyectos interesantes._
