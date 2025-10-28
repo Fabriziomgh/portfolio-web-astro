@@ -1,0 +1,78 @@
+---
+import { format } from '@formkit/tempo';
+import { Icon } from 'astro-icon/components';
+import { formatDuration } from '@/utils/formatDuration';
+
+interface Props {
+   company: string;
+   position: string;
+   url: string;
+   startDate: string | Date;
+   endDate: string | Date | null;
+   description: string;
+   highlights: string[];
+   isActive?: boolean;
+}
+
+const {
+   company,
+   position,
+   url,
+   startDate,
+   endDate,
+   description,
+   highlights,
+   isActive = false,
+} = Astro.props;
+
+const duration = formatDuration(startDate, endDate ? endDate : null);
+---
+
+<div
+   class="bg-background-card border-border rounded-xl border p-4 md:p-6 transition-all duration-300 hover:shadow-lg"
+>
+   <div class="mb-4">
+      <div class="mb-2 flex items-center justify-between gap-2 text-secondary">
+         <div class="flex items-center gap-2">
+            <Icon name="calendar" size={18} />
+            <span class="text-sm text-secondary capitalize">
+               {
+                  `${format(startDate, 'medium')} ${
+                     endDate ? `- ${format(endDate, 'medium')}` : ''
+                  }`
+               }
+            </span>
+         </div>
+
+         {duration}
+      </div>
+
+      <a
+         href={url}
+         target="_blank"
+         title={`Visitar sitio web de ${company}`}
+         class="inline-block tracking-tighter mb-1 text-xl font-semibold hover:underline active:underline text-third"
+      >
+         {company}
+      </a>
+
+      <h4 class="text-base font-medium text-primary">{position}</h4>
+   </div>
+
+   <p class="mb-6 leading-relaxed text-secondary">{description}</p>
+
+   <div class="space-y-3">
+      <h5 class="text-sm font-medium text-primary">
+         Tecnologías y Habilidades aprendidas:
+      </h5>
+      <div class="flex flex-wrap gap-4">
+         {
+            highlights.map((tech) => (
+               <span class="rounded-lg px-3 py-1 text-sm font-medium transition-transform duration-200 hover:scale-105 bg-border text-secondary cursor-pointer ">
+                  {tech}
+               </span>
+            ))
+         }
+      </div>
+   </div>
+</div>

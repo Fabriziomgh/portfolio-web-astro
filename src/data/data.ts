@@ -1,16 +1,3 @@
-import Git from '@/icons/technologies/Git.astro';
-import Github from '@/icons/technologies/Github.astro';
-import Javascript from '@/icons/technologies/Javascript.astro';
-import Css from '@/icons/technologies/Css.astro';
-import Mysql from '@/icons/technologies/Mysql.astro';
-import Nextjs from '@/icons/technologies/Nextjs.astro';
-import React from '@/icons/technologies/React.astro';
-import Tailwind from '@/icons/technologies/Tailwind.astro';
-import Typescript from '@/icons/technologies/Typescript.astro';
-import Postgresql from '@/icons/technologies/Postgresql.astro';
-import Figma from '@/icons/technologies/Figma.astro';
-import Nodejs from '@/icons/technologies/Nodejs.astro';
-
 export const cv = {
    basics: {
       name: 'Fabrizio Gutiérrez',
@@ -61,7 +48,6 @@ export const cv = {
             'PostgreSQL',
             'SQL Server',
          ],
-         isActive: true,
       },
       // {
       //    company: 'MangoNetwork C.A',
@@ -158,118 +144,82 @@ export const cv = {
    ],
    skills: [
       {
-         title: 'Frontend',
-         icon: 'desktop',
-         technologies: [
-            {
-               name: 'JavaScript',
-               icon: Javascript,
-               description:
-                  'Lenguaje de programación versátil para desarrollo web, habilitando interactividad en sitios web y aplicaciones.',
-               category: 'Frontend',
-            },
-            {
-               name: 'TypeScript',
-               icon: Typescript,
-               description:
-                  'Superset de JavaScript que añade tipado estático para desarrollo más robusto, mantenible y escalable.',
-               category: 'Frontend',
-            },
-            {
-               name: 'React',
-               icon: React,
-               description:
-                  'Biblioteca de JavaScript para construir interfaces de usuario interactivas y componentes reutilizables.',
-               category: 'Frontend',
-            },
-            {
-               name: 'Next.js',
-               icon: Nextjs,
-               description:
-                  'Framework de React para aplicaciones web con renderizado del lado del servidor y generación estática.',
-               category: 'Frontend',
-            },
-            {
-               name: 'CSS',
-               icon: Css,
-               description:
-                  'Lenguaje de hojas de estilo para describir la presentación de documentos HTML, controlando diseño y apariencia.',
-               category: 'Frontend',
-            },
-            {
-               name: 'Tailwind CSS',
-               icon: Tailwind,
-               description:
-                  'Framework de CSS utility-first para crear diseños personalizados de forma rápida y eficiente.',
-               category: 'Frontend',
-            },
-         ],
+         name: 'JavaScript',
+         icon: 'javascript',
+         description:
+            'Lenguaje de programación versátil para desarrollo web, habilitando interactividad en sitios web y aplicaciones.',
       },
       {
-         title: 'Backend',
-         icon: 'server',
-         technologies: [
-            {
-               name: 'Node.js',
-               icon: Nodejs,
-               description:
-                  'Entorno de ejecución de JavaScript del lado del servidor que permite construir aplicaciones escalables y de alto rendimiento',
-               category: 'Backend',
-            },
-         ],
+         name: 'TypeScript',
+         icon: 'typescript',
+         description:
+            'Superset de JavaScript que añade tipado estático para desarrollo más robusto, mantenible y escalable.',
       },
       {
-         title: 'Base de Datos',
-         icon: 'database',
-         technologies: [
-            {
-               name: 'PostgreSQL',
-               icon: Postgresql,
-               description:
-                  'Sistema de gestión de bases de datos relacional avanzado, open source y con soporte para JSON.',
-               category: 'Database',
-            },
-            {
-               name: 'MySQL',
-               icon: Mysql,
-               description:
-                  'Sistema de gestión de bases de datos relacional open source ampliamente utilizado en aplicaciones web.',
-               category: 'Database',
-            },
-         ],
+         name: 'React.js',
+         icon: 'react',
+         description:
+            'Biblioteca de JavaScript para construir interfaces de usuario interactivas y componentes reutilizables.',
       },
       {
-         title: 'Control de Versiones',
+         name: 'Astro.js',
+         icon: 'astro',
+         description:
+            'Framework de JavaScript de código abierto diseñado para construir sitios web rápidos y orientados al contenido.',
+      },
+      {
+         name: 'Next.js',
+         icon: 'nextjs',
+         description:
+            'Framework de React para aplicaciones web con renderizado del lado del servidor y generación estática.',
+      },
+      {
+         name: 'CSS',
+         icon: 'css',
+         description:
+            'Lenguaje de hojas de estilo para describir la presentación de documentos HTML, controlando diseño y apariencia.',
+      },
+      {
+         name: 'Tailwind CSS',
+         icon: 'tailwindcss',
+         description:
+            'Framework de CSS utility-first para crear diseños personalizados de forma rápida y eficiente.',
+      },
+      {
+         name: 'Node.js',
+         icon: 'nodejs',
+         description:
+            'Entorno de ejecución de JavaScript del lado del servidor que permite construir aplicaciones escalables y de alto rendimiento',
+      },
+      {
+         name: 'PostgreSQL',
+         icon: 'postgresql',
+         description:
+            'Sistema de gestión de bases de datos relacional avanzado, open source y con soporte para JSON.',
+      },
+      {
+         name: 'MySQL',
+         icon: 'mysql',
+         description:
+            'Sistema de gestión de bases de datos relacional open source ampliamente utilizado en aplicaciones web.',
+      },
+      {
+         name: 'Git',
          icon: 'git',
-         technologies: [
-            {
-               name: 'Git',
-               icon: Git,
-               description:
-                  'Sistema de control de versiones distribuido para rastrear cambios en el código fuente de forma eficiente.',
-               category: 'Versiones',
-            },
-            {
-               name: 'GitHub',
-               icon: Github,
-               description:
-                  'Plataforma de desarrollo colaborativo basada en Git para alojar proyectos y facilitar el trabajo en equipo.',
-               category: 'Versiones',
-            },
-         ],
+         description:
+            'Sistema de control de versiones distribuido para rastrear cambios en el código fuente de forma eficiente.',
       },
       {
-         title: 'Diseño',
-         icon: 'boxleft',
-         technologies: [
-            {
-               name: 'Figma',
-               icon: Figma,
-               description:
-                  'Herramienta de diseño colaborativo en la nube para crear interfaces de usuario y prototipos interactivos.',
-               category: 'Diseño',
-            },
-         ],
+         name: 'GitHub',
+         icon: 'github',
+         description:
+            'Plataforma de desarrollo colaborativo basada en Git para alojar proyectos y facilitar el trabajo en equipo.',
+      },
+      {
+         name: 'Figma',
+         icon: 'figma',
+         description:
+            'Herramienta de diseño colaborativo en la nube para crear interfaces de usuario y prototipos interactivos.',
       },
    ],
 

@@ -1,0 +1,37 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+   name: string;
+   icon: string;
+   description: string;
+}
+
+const { name, icon, description } = Astro.props;
+---
+
+<div
+   class="group bg-background-card border-border relative overflow-hidden rounded-xl border transition-all duration-300 hover:scale-105 hover:shadow-lg"
+>
+   <div class="p-6">
+      <Icon name={`technologies/${icon}`} class="size-10 mb-4" />
+
+      <h3
+         class="mb-2 text-lg text-primary font-semibold transition-colors duration-300"
+      >
+         {name}
+      </h3>
+
+      <p class="mb-3 text-sm leading-relaxed text-secondary">
+         {description}
+      </p>
+   </div>
+
+   <div
+      class="absolute inset-0 bg-linear-to-br from-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-10"
+      style={{
+         background: `linear-gradient(135deg, transparent 0%, var(--color-third) 100%)`,
+      }}
+   >
+   </div>
+</div>
