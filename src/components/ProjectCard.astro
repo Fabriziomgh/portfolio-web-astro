@@ -1,0 +1,84 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+   name: string;
+   description: string;
+   img: string;
+   highlights: string[];
+   github?: string;
+   url?: string;
+}
+
+const { name, description, img, highlights, github, url } = Astro.props;
+---
+
+<div class="group/proyecto block overflow-hidden max-w-sm rounded">
+   <img
+      src={img}
+      alt=""
+      class="h-64 w-full object-cover transition duration-500 group-hover/proyecto:scale-105"
+   />
+
+   <div class="bg-background-card p-6">
+      <div class="flex flex-wrap gap-2">
+         {
+            highlights.map((highlight) => (
+               <span class="rounded-full px-3 py-1 text-sm font-medium bg-third text-white capitalize">
+                  {highlight}
+               </span>
+            ))
+         }
+      </div>
+
+      <h3 class="mt-1.5 text-lg font-semibold text-primary">
+         {name}
+      </h3>
+
+      <p class="mt-1.5 line-clamp-3 text-secondary text-sm">
+         {description}
+      </p>
+
+      <div class="mt-4 flex gap-4">
+         {
+            github && (
+               <a
+                  href={github}
+                  title={`Repositorio del proyecto ${name}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group/enlace flex items-center gap-3 rounded-lg px-4 py-3 transition-all duration-300 hover:scale-105 bg-background-card border border-border hover:border-third hover:bg-[rgba(255, 137, 4, 0.05)]"
+               >
+                  <Icon
+                     name="github"
+                     class="h-5 w-5 transition-colors group-hover/enlace:text-white text-third"
+                  />
+                  <span class="font-medium transition-colors group-hover/enlace:text-white text-primary">
+                     Código
+                  </span>
+               </a>
+            )
+         }
+
+         {
+            url && (
+               <a
+                  href={url}
+                  target="_blank"
+                  title={`Visualizacion del proyecto ${name}`}
+                  rel="noopener noreferrer"
+                  class="group flex items-center gap-3 rounded-lg px-4 py-3 transition-all duration-300 hover:scale-105 bg-background-card border border-border hover:border-third hover:bg-[rgba(255, 137, 4, 0.05)]"
+               >
+                  <Icon
+                     name="link"
+                     class="h-5 w-5 transition-colors group-hover:text-white text-third"
+                  />
+                  <span class="font-medium transition-colors group-hover:text-white text-primary">
+                     Preview
+                  </span>
+               </a>
+            )
+         }
+      </div>
+   </div>
+</div>

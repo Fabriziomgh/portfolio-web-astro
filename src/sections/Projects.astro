@@ -1,0 +1,24 @@
+---
+import { cv } from '@/data/data';
+import ProjectCard from '@/components/ProjectCard.astro';
+import SectionTitle from '@/components/SectionTitle.astro';
+import SectionFooter from '@/components/SectionFooter.astro';
+import SectionWrapper from '@/components/SectionWrapper.astro';
+
+const { projects } = cv;
+---
+
+<SectionWrapper id="proyectos" class="max-w-7xl">
+   <SectionTitle
+      title="Proyectos Realizados"
+      subTitle="Una selección de proyectos que demuestran mis habilidades en desarrollo web y las tecnologías que manejo"
+   />
+
+   <div class="grid grid-cols-1 md:grid-cols-3 place-items-center">
+      {projects.map((project) => <ProjectCard {...project} />)}
+   </div>
+
+   <SectionFooter
+      text="Constantemente trabajando en nuevos proyectos y explorando tecnologías innovadoras"
+   />
+</SectionWrapper>

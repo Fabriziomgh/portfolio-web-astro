@@ -50,7 +50,7 @@ const links = [
                links.map((item) => (
                   <a
                      href={item.href}
-                     class="flex w-full items-center gap-3 rounded-lg px-4 py-3 text-left transition-colors duration-200 text-secondary hover:text-primary hover:bg-background cursor-pointer"
+                     class="mobile-links flex w-full items-center gap-3 rounded-lg px-4 py-3 text-left transition-colors duration-200 text-secondary hover:text-primary hover:bg-background cursor-pointer"
                   >
                      <Icon name={item.icon} size={20} />
                      <span class="font-medium">{item.name}</span>
@@ -68,6 +68,7 @@ const links = [
    const navbar = document.getElementById('navbar');
    const iconMenu = document.getElementById('icon-menu');
    const iconClose = document.getElementById('icon-close');
+   const allMobileLinks = document.querySelectorAll('.mobile-links');
 
    btn?.addEventListener('click', () => {
       menu?.classList.toggle('hidden');
@@ -81,5 +82,13 @@ const links = [
       } else {
          navbar?.classList.remove('backdrop-blur-sm', 'bg-black/20');
       }
+   });
+
+   allMobileLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+         menu?.classList.toggle('hidden');
+         iconMenu?.classList.toggle('hidden');
+         iconClose?.classList.toggle('hidden');
+      });
    });
 </script>

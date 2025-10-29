@@ -1,4 +1,6 @@
 ---
+import { twMerge } from 'tailwind-merge';
+
 interface Props {
    id?: string;
    class?: string;
@@ -9,7 +11,10 @@ const { id, class: extraClass = '' } = Astro.props;
 
 <section
    id={id}
-   class={`min-h-screen lg:mb-20 mb-10 max-w-4xl mx-auto px-4 ${extraClass}`}
+   class={twMerge(
+      'min-h-screen lg:mb-20 mb-10 max-w-4xl mx-auto px-4',
+      extraClass
+   )}
 >
    <slot />
 </section>

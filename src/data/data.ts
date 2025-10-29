@@ -248,7 +248,7 @@ export const cv = {
    projects: [
       {
          name: 'World Rank',
-         img: '/img/world-rank.png',
+         img: '/src/assets/world-rank.webp',
          isActive: true,
          description:
             'World Rank es una web que te permite ver todos los datos de un país en concreto, como tambien variedad de filtros para mostrar diferente información',
@@ -258,7 +258,7 @@ export const cv = {
       },
       {
          name: 'JS Quizz',
-         img: '/img/quizz.png',
+         img: '/src/assets/quizz.webp',
          isActive: true,
          description:
             'JS Quiz es una aplicación web que permite a los usuarios responder preguntas y obtener su puntuación al final del cuestionario',
@@ -268,11 +268,11 @@ export const cv = {
       },
       {
          name: 'Movies App',
-         img: '/img/movies-app.png',
+         img: '/src/assets/movies-app.webp',
          isActive: false,
          description:
             'Una pequeña app donde puedes ver las películas más populares del momento, y buscar cualquier pelicula que desees',
-         highlights: ['react', 'react-native', 'expo', 'typescript'],
+         highlights: ['react native', 'expo', 'typescript'],
          url: undefined,
          github: 'https://github.com/Fabriziomgh/movies-app',
       },
