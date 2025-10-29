@@ -18,4 +18,5 @@ body {
 html {
     background-color: var(--color-background);
     scroll-padding-top: 100px;
+    scroll-behavior: smooth;
 }
