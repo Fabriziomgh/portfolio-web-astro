@@ -1,10 +1,10 @@
 ---
 interface Props {
    title: string;
-   subTitle: string;
+   subTitle?: string;
 }
 
-const { title, subTitle } = Astro.props;
+const { title, subTitle = '' } = Astro.props;
 ---
 
 <div class="mb-12 text-center">
