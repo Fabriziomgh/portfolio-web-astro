@@ -14,7 +14,7 @@ const { projects } = cv;
       subTitle="Una selección de proyectos que demuestran mis habilidades en desarrollo web y las tecnologías que manejo"
    />
 
-   <div class="grid grid-cols-1 md:grid-cols-3 place-items-center">
+   <div class="grid grid-cols-1 md:grid-cols-3 place-items-center gap-2">
       {projects.map((project) => <ProjectCard {...project} />)}
    </div>
 

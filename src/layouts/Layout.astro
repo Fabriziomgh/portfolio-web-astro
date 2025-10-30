@@ -1,5 +1,6 @@
 ---
 import '@/styles/global.css';
+import 'aos/dist/aos.css';
 import '@fontsource-variable/inter';
 ---
 
@@ -20,5 +21,9 @@ import '@fontsource-variable/inter';
    </head>
    <body>
       <slot />
+      <script>
+         import AOS from 'aos';
+         AOS.init();
+      </script>
    </body>
 </html>
