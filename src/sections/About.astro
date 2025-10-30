@@ -1,0 +1,79 @@
+---
+import { cv } from '@/data/data';
+import SectionTitle from '@/components/SectionTitle.astro';
+import SectionWrapper from '@/components/SectionWrapper.astro';
+import { Icon } from 'astro-icon/components';
+
+const {
+   basics: { name },
+} = cv;
+---
+
+<SectionWrapper id="about">
+   <SectionTitle title="Sobre Mí" />
+   <h3 class="md:text-3xl text-xl text-primary mb-4">
+      ¡Hola! Soy <span class="text-third">{name}</span>
+   </h3>
+
+   <div class="space-y-4">
+      <p class="md:text-lg leading-relaxed text-secondary">
+         Soy un <strong class="text-primary">desarrollador apasionado</strong> por
+         crear soluciones tecnológicas innovadoras y experiencias digitales excepcionales.
+         Con experiencia en desarrollo frontend y backend, me especializo en construir
+         aplicaciones web <strong class="text-primary"
+            >modernas, eficientes y escalables</strong
+         >.
+      </p>
+      <p class="md:text-lg leading-relaxed text-secondary">
+         Mi enfoque se centra en escribir <strong class="text-primary"
+            >código limpio</strong
+         >, mantener las mejores prácticas de desarrollo y estar siempre
+         actualizado con las últimas tecnologías. Disfruto trabajando en equipo
+         y enfrentando nuevos desafíos que me permitan crecer profesionalmente.
+      </p>
+   </div>
+
+   <div class="mt-12 flex md:justify-between flex-col md:flex-row gap-4">
+      <div class="w-1/2">
+         <div class="flex items-center gap-2 mb-4 text-primary">
+            <Icon name="desktop" />
+            <h5 class="">Habilidades Técnicas</h5>
+         </div>
+         <div class="flex flex-wrap gap-2">
+            {
+               [
+                  'Desarrollo Full Stack',
+                  'Resolución de Problemas',
+                  'Arquitectura de Software',
+               ].map((skill) => (
+                  <span class="px-4 py-2 rounded-lg transition-all duration-300 hover:shadow-md cursor-pointer group relative overflow-hidden bg-background-card text-primary border border-border">
+                     <span class="absolute bg-third inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+                     <span class="relative z-10">{skill}</span>
+                  </span>
+               ))
+            }
+         </div>
+      </div>
+
+      <div class="w-1/2">
+         <div class="flex items-center gap-2 mb-4 text-primary">
+            <Icon name="user" />
+            <h5>Habilidades Interpersonales</h5>
+         </div>
+         <div class="flex flex-wrap gap-2">
+            {
+               [
+                  'Trabajo en Equipo',
+                  'Aprendizaje Continuo',
+                  'Comunicación Efectiva',
+               ].map((skill) => (
+                  <span class="px-4 py-2 rounded-lg transition-all duration-300 hover:shadow-md cursor-pointer group relative overflow-hidden bg-background-card text-primary border border-border">
+                     <span class="absolute bg-third  inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+                     <span class="relative z-10">{skill}</span>
+                  </span>
+               ))
+            }
+         </div>
+      </div>
+   </div>
+</SectionWrapper>
