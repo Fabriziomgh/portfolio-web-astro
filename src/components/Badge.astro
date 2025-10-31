@@ -1,0 +1,19 @@
+---
+import { twMerge } from 'tailwind-merge';
+
+interface Props {
+   text: string;
+   class?: string;
+}
+
+const { text, class: extraClass = '' } = Astro.props;
+---
+
+<span
+   class={twMerge(
+      'rounded-lg px-3 py-1 text-sm font-medium transition-transform duration-200 hover:scale-105 bg-border text-secondary cursor-pointer',
+      extraClass
+   )}
+>
+   {text}
+</span>
