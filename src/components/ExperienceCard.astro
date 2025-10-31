@@ -2,6 +2,7 @@
 import { format } from '@formkit/tempo';
 import { Icon } from 'astro-icon/components';
 import { formatDuration } from '@/utils/formatDuration';
+import Badge from '@/components/Badge.astro';
 
 interface Props {
    company: string;
@@ -66,13 +67,7 @@ const duration = formatDuration(startDate, endDate ? endDate : null);
          Tecnologías y Habilidades aprendidas:
       </h5>
       <div class="flex flex-wrap gap-4">
-         {
-            highlights.map((tech) => (
-               <span class="rounded-lg px-3 py-1 text-sm font-medium transition-transform duration-200 hover:scale-105 bg-border text-secondary cursor-pointer ">
-                  {tech}
-               </span>
-            ))
-         }
+         {highlights.map((tech) => <Badge text={tech} />)}
       </div>
    </div>
 </div>

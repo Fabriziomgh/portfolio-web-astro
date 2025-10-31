@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components';
+import Badge from './Badge.astro';
 
 interface Props {
    name: string;
@@ -23,12 +24,13 @@ const { name, description, img, highlights, github, url } = Astro.props;
    />
 
    <div class="bg-background-card p-6">
-      <div class="flex flex-wrap gap-2">
+      <div class="flex flex-wrap gap-2 mb-4">
          {
             highlights.map((highlight) => (
-               <span class="rounded-full px-3 py-1 text-sm font-medium bg-third text-white capitalize">
-                  {highlight}
-               </span>
+               <Badge
+                  text={highlight}
+                  class="bg-third text-primary capitalize"
+               />
             ))
          }
       </div>
