@@ -22,7 +22,7 @@ export const cv = {
       profiles: [
          {
             name: 'LinkedIn',
-            url: 'https://www.linkedin.com/in/fabrizio-miguel-gutierrez-hernandez/',
+            url: 'https://www.linkedin.com/in/fabriziomgh/',
             icon: 'linkedin',
          },
          {
@@ -40,13 +40,14 @@ export const cv = {
          startDate: '2024-06-20',
          endDate: null,
          description:
-            'Construcción de APIs RESTful para migración entre bases de datos, utilizando tecnologías como Golang y Gin.Optimización de consultas SQL y gestión de bases de datos relacionales para asegurar eficiencia en el manejo de la información. Colaboración en el diseño de interfaces de usuario mediante herramientas como Figma, trabajando en conjunto con equipos de diseño. Documentación detallada de código y procesos para facilitar el mantenimiento y escalabilidad de los proyectos.',
+            'Desarrollo de APIs RESTful para la migración y sincronización entre bases de datos, utilizando Golang y el framework Gin, asegurando un flujo de información confiable y eficiente. Implementación de optimización de consultas SQL y gestión de bases de datos relacionales para mejorar el rendimiento en el manejo de datos. Colaboración en el diseño de interfaces de usuario junto a equipos de diseño mediante Figma, garantizando coherencia visual y usabilidad. Creación de landing pages para productos de la empresa empleando TailwindCSS y Astro.js, enfocadas en ofrecer interfaces modernas, rápidas y optimizadas para la conversión. Elaboración de documentación técnica detallada de código y procesos, facilitando el mantenimiento, la escalabilidad y la incorporación de nuevos desarrolladores al proyecto.',
          highlights: [
             'Programación backend (Golang)',
             'Desarrollo de APIs y consumo de servicios REST',
             'Figma',
             'PostgreSQL',
-            'SQL Server',
+            'Astro.js',
+            'Tailwind CSS',
          ],
       },
       // {
@@ -68,17 +69,18 @@ export const cv = {
       // },
       {
          company: 'Instituto Nacional de los Espacios Acuáticos',
-         position: 'División de Tecnología - Programador',
+         position: 'Programador Junior',
          url: 'https://www.inea.gob.ve/',
          startDate: '2023-10-03',
-         endDate: '2025-08-24',
+         endDate: '2024-06-24',
          description:
-            'Diseño y desarrollo de un sistema de gestión de expedientes para los trabajadores utilizando tecnologías como React para la interfaz de usuario y MySQL para la base de datos para agilizar las funciones dentro del area. Soporte técnico dentro del departamento de Recursos Humanos, asegurando la eficiencia y el funcionamiento óptimo de los sistemas informáticos.',
+            'Diseñé y desarrollé un sistema de gestión de expedientes para los trabajadores de la empresa, utilizando React como framework principal para construir interfaces limpias, ágiles y fáciles de usar. Implementé una API con Node.js para la comunicación con la base de datos en MySQL, lo que permitió optimizar los procesos internos y agilizar en un 30% las tareas del área de Recursos Humanos.',
          highlights: [
-            'Soporte técnico',
-            'Desarrollo y programación',
-            'Configuración de equipos',
-            'Redes',
+            'React.js',
+            'Creación de APIs con Node.js',
+            'MySQL',
+            'Integración frontend-backend',
+            'Tailwind CSS',
          ],
       },
    ],
