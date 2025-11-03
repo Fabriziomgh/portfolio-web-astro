@@ -36,6 +36,9 @@ const links = [
             <button
                id="menu-btn"
                class="rounded-lg p-2 transition-colors duration-200 text-primary"
+               aria-label="Abrir menú de navegación"
+               aria-expanded="false"
+               aria-controls="mobile-menu"
             >
                <Icon id="icon-menu" name="menu" size={24} />
                <Icon id="icon-close" name="x" size={24} class="hidden" />
@@ -72,9 +75,17 @@ const links = [
    const allMobileLinks = document.querySelectorAll('.mobile-links');
 
    btn?.addEventListener('click', () => {
+      const isOpen = !menu?.classList.contains('hidden');
+
       menu?.classList.toggle('hidden');
       iconMenu?.classList.toggle('hidden');
       iconClose?.classList.toggle('hidden');
+
+      btn.setAttribute('aria-expanded', String(!isOpen));
+      btn.setAttribute(
+         'aria-label',
+         isOpen ? 'Abrir menú de navegación' : 'Cerrar menú de navegación'
+      );
    });
 
    window.addEventListener('scroll', () => {
