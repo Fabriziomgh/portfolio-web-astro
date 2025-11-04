@@ -74,9 +74,26 @@ const links = [
    const iconClose = document.getElementById('icon-close');
    const allMobileLinks = document.querySelectorAll('.mobile-links');
 
+   function updateNavbarBlur() {
+      const isMenuOpen = !menu?.classList.contains('hidden');
+      const isScrolled = window.scrollY > 50;
+      if (isMenuOpen) {
+         navbar?.classList.remove('backdrop-blur-sm', 'bg-black/20');
+         navbar?.classList.add('bg-background-card');
+      } else if (isScrolled) {
+         navbar?.classList.remove('bg-background-card');
+         navbar?.classList.add('backdrop-blur-sm', 'bg-black/20');
+      } else {
+         navbar?.classList.remove(
+            'backdrop-blur-sm',
+            'bg-black/20',
+            'bg-background-card'
+         );
+      }
+   }
+
    btn?.addEventListener('click', () => {
       const isOpen = !menu?.classList.contains('hidden');
-
       menu?.classList.toggle('hidden');
       iconMenu?.classList.toggle('hidden');
       iconClose?.classList.toggle('hidden');
@@ -86,15 +103,10 @@ const links = [
          'aria-label',
          isOpen ? 'Abrir menú de navegación' : 'Cerrar menú de navegación'
       );
+      updateNavbarBlur();
    });
 
-   window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-         navbar?.classList.add('backdrop-blur-sm', 'bg-black/20');
-      } else {
-         navbar?.classList.remove('backdrop-blur-sm', 'bg-black/20');
-      }
-   });
+   window.addEventListener('scroll', updateNavbarBlur);
 
    allMobileLinks.forEach((link) => {
       link.addEventListener('click', () => {
