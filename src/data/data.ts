@@ -2,14 +2,14 @@ export const cv = {
    basics: {
       name: 'Fabrizio Gutiérrez',
       level: 'Ingeniero de Sistemas',
-      label: 'Full-Stack Web Developer',
+      label: 'Frontend Web Developer',
       phone: '',
       image: 'https://avatars.githubusercontent.com/u/91578919?s=400&u=224bf569574504a79fb2e7b9cb40de788e9b0378&v=4',
       email: 'gutierrezfabrizio02@gmail.com',
       url: '',
       summary: {
          p1: 'Desarrollando aplicaciones web completas, combinando lógica backend con interfaces modernas y funcionales. ',
-         p2: '+1 año de experiencia creando soluciones full stack con enfoque en rendimiento, claridad de datos y arquitectura limpia. ',
+         p2: '+1 año de experiencia creando soluciones frontend con enfoque en rendimiento, claridad de datos y arquitectura limpia. ',
          p3: 'Mi fortaleza está en el desarrollo frontend, donde disfruto construir interfaces intuitivas, eficientes y fáciles de usar, siempre alineadas con la lógica del sistema.',
       },
       location: {
