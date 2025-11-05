@@ -249,6 +249,16 @@ export const cv = {
    ],
    projects: [
       {
+         name: 'Sistema de gestión de expedientes',
+         img: '/src/assets/inea.webp',
+         isActive: true,
+         description:
+            'Sistema enfocado en la gestion de expedientes para los trabajadores del Instituto Nacional de los Espacios Acuáticos, optimizando los procesos internos del área de Recursos Humanos',
+         highlights: ['react', 'tailwind', 'nodejs', 'mysql'],
+         url: null,
+         github: null,
+      },
+      {
          name: 'World Rank',
          img: '/src/assets/world-rank.webp',
          isActive: true,
@@ -275,8 +285,25 @@ export const cv = {
          description:
             'Una pequeña app donde puedes ver las películas más populares del momento, y buscar cualquier pelicula que desees',
          highlights: ['react native', 'expo', 'typescript'],
-         url: undefined,
+         url: null,
          github: 'https://github.com/Fabriziomgh/movies-app',
+      },
+      {
+         name: 'Sistema de Inventario',
+         img: '/src/assets/sistema-inventario.webp',
+         isActive: true,
+         description:
+            'Sistema de inventario desarrollado para gestionar productos, categorías y proveedores, optimizando el control de stock y facilitando la administración de inventarios en pequeñas empresas',
+         highlights: [
+            'react',
+            'tailwind',
+            'typescript',
+            'nodejs',
+            'mysql',
+            'zustand',
+         ],
+         url: null,
+         github: null,
       },
    ],
 };

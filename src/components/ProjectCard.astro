@@ -4,17 +4,21 @@ import Badge from './Badge.astro';
 
 interface Props {
    name: string;
+   isActive?: boolean;
    description: string;
    img: string;
    highlights: string[];
-   github?: string;
-   url?: string;
+   github?: string | null;
+   url?: string | null;
 }
 
-const { name, description, img, highlights, github, url } = Astro.props;
+const { name, description, img, highlights, github, url, isActive } =
+   Astro.props;
 ---
 
-<div class="group/proyecto block overflow-hidden max-w-sm rounded">
+<div
+   class="group/proyecto block overflow-hidden max-w-sm rounded h-full bg-background-card"
+>
    <img
       loading="lazy"
       decoding="async"
@@ -23,7 +27,7 @@ const { name, description, img, highlights, github, url } = Astro.props;
       class="h-64 w-full object-cover transition duration-500 group-hover/proyecto:scale-105"
    />
 
-   <div class="bg-background-card p-6">
+   <div class="p-6">
       <div class="flex flex-wrap gap-2 mb-4">
          {
             highlights.map((highlight) => (
@@ -31,12 +35,21 @@ const { name, description, img, highlights, github, url } = Astro.props;
             ))
          }
       </div>
+      <div class="flex items-center gap-x-2 mt-1.5">
+         <h3 class="text-md md:text-lg font-semibold text-primary">
+            {name}
+         </h3>
+         <Icon
+            name="circle"
+            size={9}
+            class:list={[
+               { 'text-secondary': !isActive },
+               { 'text-green-500': isActive },
+            ]}
+         />
+      </div>
 
-      <h3 class="mt-1.5 text-lg font-semibold text-primary">
-         {name}
-      </h3>
-
-      <p class="mt-1.5 line-clamp-3 text-secondary text-sm">
+      <p class="mt-1.5 text-secondary text-[13px] transition-all">
          {description}
       </p>
 
