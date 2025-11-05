@@ -5,7 +5,7 @@ import SectionTitle from '@/components/SectionTitle.astro';
 import SectionWrapper from '@/components/SectionWrapper.astro';
 
 const {
-   basics: { name },
+   basics: { name, level, label },
 } = cv;
 ---
 
@@ -13,50 +13,22 @@ const {
    <SectionTitle title="Sobre Mí" />
    <h3 class="md:text-3xl text-xl text-primary mb-4 text-center md:text-start">
       ¡Hola! Soy <span class="text-third">{name}</span>
+      <span class="block text-base font-bold text-secondary italic mt-2"
+         >{`${level} & ${label}`}</span
+      >
    </h3>
 
    <div class="space-y-4 text-center md:text-start">
       <p class="md:text-lg leading-relaxed text-secondary">
-         Soy un <strong class="text-primary">desarrollador apasionado</strong> por
-         crear soluciones tecnológicas innovadoras y experiencias digitales excepcionales.
-         Con experiencia en desarrollo frontend y backend, me especializo en construir
-         aplicaciones web <strong class="text-primary"
-            >modernas, eficientes y escalables</strong
-         >.
-      </p>
-      <p class="md:text-lg leading-relaxed text-secondary">
-         Mi enfoque se centra en escribir <strong class="text-primary"
-            >código limpio</strong
-         >, mantener las mejores prácticas de desarrollo y estar siempre
-         actualizado con las últimas tecnologías. Disfruto trabajando en equipo
-         y enfrentando nuevos desafíos que me permitan crecer profesionalmente.
+         Me especializo en crear aplicaciones web modernas con enfoque en
+         rendimiento y usabilidad, escribiendo código limpio y mantenible.
+         Disfruto del trabajo en equipo y enfrentar desafíos que me permitan
+         seguir creciendo profesionalmente.
       </p>
    </div>
 
    <div class="mt-12 flex md:justify-between flex-col md:flex-row gap-4">
-      <div class="md:w-1/2">
-         <div
-            class="flex items-center gap-2 mb-4 text-primary justify-center md:justify-start"
-         >
-            <Icon name="desktop" />
-            <h4 class="">Habilidades Técnicas</h4>
-         </div>
-         <div class="flex flex-wrap gap-2">
-            {
-               [
-                  'Desarrollo Full Stack',
-                  'Resolución de Problemas',
-                  'Arquitectura de Software',
-               ].map((skill) => (
-                  <span class="px-4 py-2 rounded-lg transition-all duration-300 hover:shadow-md cursor-pointer   bg-background-card text-primary border border-border hover:bg-third/10">
-                     {skill}
-                  </span>
-               ))
-            }
-         </div>
-      </div>
-
-      <div class="md:w-1/2">
+      <div>
          <div
             class="flex items-center gap-2 mb-4 text-primary justify-center md:justify-start"
          >
