@@ -1,15 +1,42 @@
-# Fabrizio Gutiérrez - Full-Stack Web Developer
+# Fabrizio Gutiérrez - Frontend Web Developer
 
-¡Hola! 👋 Soy **Fabrizio Gutiérrez**, Ingeniero de Sistemas y Desarrollador Full-Stack con más de 1 año de experiencia creando aplicaciones web completas. Mi pasión está en combinar lógica backend robusta con interfaces modernas y funcionales, con especial enfoque en el desarrollo frontend.
+¡Hola! Soy **Fabrizio Gutiérrez**, Ingeniero de Sistemas con más de 1 año de experiencia desarrollando aplicaciones web completas. Mi especialidad está en el desarrollo frontend, donde disfruto construir interfaces intuitivas, eficientes y fáciles de usar, siempre alineadas con la lógica del sistema.
 
 ## 🚀 Sobre Mí
 
--  🎓 **Ingeniero de Sistemas** - UNEFA (2019-2024)
--  💼 **Full-Stack Developer** con experiencia en desarrollo web
--  📍 **Ubicación**: Falcón, Venezuela
--  🌐 **Idiomas**: Español (Nativo), Inglés (B1)
+-  🔭 **Enfoque:** Desarrollo de aplicaciones web completas combinando lógica backend con interfaces modernas y funcionales
+-  💪 **Fortalezas:** Desarrollo frontend con enfoque en rendimiento, claridad de datos y arquitectura limpia
+-  📍 **Ubicación:** Falcón, Venezuela
 
-> _"Mi fortaleza está en el desarrollo frontend, donde disfruto construir interfaces intuitivas, eficientes y fáciles de usar, siempre alineadas con la lógica del sistema."_
+## 💼 Experiencia Laboral
+
+### **Programador Junior** - Besser Solutions
+
+_Junio 2024 - Presente_
+
+-  Desarrollo de APIs RESTful para migración y sincronización entre bases de datos usando Golang y Gin
+-  Implementación de optimización de consultas SQL y gestión de bases de datos relacionales
+-  Creación de landing pages con TailwindCSS y Astro.js
+-  Colaboración en diseño de interfaces con equipos de diseño mediante Figma
+-  Elaboración de documentación técnica detallada
+
+**Tecnologías:** Golang, APIs REST, Figma, PostgreSQL, Astro.js, Tailwind CSS
+
+### **Programador Junior** - Instituto Nacional de los Espacios Acuáticos
+
+_Octubre 2023 - Junio 2024_
+
+-  Diseño y desarrollo de sistema de gestión de expedientes para trabajadores
+-  Implementación de API con Node.js para comunicación con base de datos MySQL
+-  Optimización de procesos internos agilizando en 30% las tareas de Recursos Humanos
+
+**Tecnologías:** React.js, Node.js, MySQL, Tailwind CSS
+
+## 🎓 Educación
+
+### **Ingeniería de Sistemas** - UNEFA
+
+-  Cursos relevantes: PHP, SQL Básico, JavaScript, Sistemas Operativos
 
 ## 🛠️ Tecnologías y Habilidades
 
@@ -34,12 +61,6 @@
 ![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
 
-## 📜 Certificaciones
-
--  **Programación Básica** - Platzi (2022)
--  **Master JavaScript with Node.js** - Udemy (2024)
--  **Tailwind CSS Start to Mastery** - Udemy (2024)
-
 ---
 
-_¿Interesado en colaborar? No dudes en contactarme para oportunidades profesionales o proyectos interesantes._
+_Desarrollando soluciones frontend con pasión y atención al detalle_
