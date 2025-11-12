@@ -1,16 +1,33 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
 <footer>
    <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      <div class="sm:flex sm:items-center sm:justify-between">
+      <div
+         class="flex flex-col items-center space-y-4 sm:space-y-0 sm:flex-row sm:justify-between"
+      >
          <div
             class="flex justify-center text-secondary sm:justify-start font-bold"
          >
             Fabriziomgh &#10084;
          </div>
-         <p
-            class="mt-4 text-center text-sm text-secondary lg:mt-0 lg:text-right dark:text-gray-400"
-         >
-            Copyright © 2024. Todos los derechos reservados.
-         </p>
+         <div>
+            <div>
+               <a
+                  href="https://www.instagram.com/gutierrezfabrizio/"
+                  rel="noopener noreferrer"
+                  title="Visitar perfil de Instagram de Fabrizio"
+                  target="_blank"
+                  class="rounded-lg text-white font-semibold block
+  bg-linear-to-r from-pink-500 via-red-500 to-yellow-500
+  transition duration-300 ease-in-out
+  hover:bg-linear-to-r hover:from-[#405de6] hover:via-[#833ab4] hover:to-[#fd1d1d]"
+               >
+                  <Icon name="instagram" class="size-9 active:scale-95" /></a
+               >
+            </div>
+         </div>
       </div>
    </div>
 </footer>
