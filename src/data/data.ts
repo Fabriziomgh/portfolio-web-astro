@@ -310,7 +310,7 @@ export const cv = {
          img: '/src/assets/portfolio.webp',
          isActive: false,
          description:
-            'Portafolio web personal desarrollado para mostrar mis proyectos y habilidades, optimizando la presentación de mi trabajo y facilitando el contacto con potenciales clientes o empleadores.',
+            'Portafolio web personal desarrollado para mostrar mis proyectos y habilidades, optimizando la presentación de mi trabajo y facilitando el contacto con potenciales clientes o empleadores',
          highlights: ['Astro.js', 'tailwind', 'typescript'],
          url: null,
          github: 'https://github.com/Fabriziomgh/portfolio-web-astro',
