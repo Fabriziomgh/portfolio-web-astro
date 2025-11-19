@@ -2,6 +2,8 @@
 import '@/styles/global.css';
 import '@fontsource-variable/inter';
 import 'aos/dist/aos.css';
+
+import logo from '@/assets/logo.webp';
 ---
 
 <!doctype html>
@@ -20,7 +22,7 @@ import 'aos/dist/aos.css';
          property="og:description"
          content="Bienvenido a mi portafolio, dónde conoceras un poco más de mí"
       />
-      <meta property="og:image" content="../assets/logo.webp" />
+      <meta property="og:image" content={logo.src} />
       <title>Portafolio de Fabrizio - Programador Web</title>
    </head>
    <body>

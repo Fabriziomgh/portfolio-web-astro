@@ -1,3 +1,10 @@
+import ineaImg from '@/assets/inea.webp';
+import worldRankImg from '@/assets/world-rank.webp';
+import quizzImg from '@/assets/quizz.webp';
+import moviesAppImg from '@/assets/movies-app.webp';
+import inventarioImg from '@/assets/sistema-inventario.webp';
+import portfolioImg from '@/assets/portfolio.webp';
+
 export const cv = {
    basics: {
       name: 'Fabrizio Gutiérrez',
@@ -250,7 +257,7 @@ export const cv = {
    projects: [
       {
          name: 'Sistema de gestión de expedientes',
-         img: '/src/assets/inea.webp',
+         img: ineaImg,
          isActive: true,
          description:
             'Sistema enfocado en la gestion de expedientes para los trabajadores del Instituto Nacional de los Espacios Acuáticos, optimizando los procesos internos del área de Recursos Humanos',
@@ -260,7 +267,7 @@ export const cv = {
       },
       {
          name: 'World Rank',
-         img: '/src/assets/world-rank.webp',
+         img: worldRankImg,
          isActive: true,
          description:
             'World Rank es una web que te permite ver todos los datos de un país en concreto, como tambien variedad de filtros para mostrar diferente información',
@@ -270,7 +277,7 @@ export const cv = {
       },
       {
          name: 'JS Quizz',
-         img: '/src/assets/quizz.webp',
+         img: quizzImg,
          isActive: true,
          description:
             'JS Quiz es una aplicación web que permite a los usuarios responder preguntas y obtener su puntuación al final del cuestionario',
@@ -280,7 +287,7 @@ export const cv = {
       },
       {
          name: 'Movies App',
-         img: '/src/assets/movies-app.webp',
+         img: moviesAppImg,
          isActive: false,
          description:
             'Una pequeña app donde puedes ver las películas más populares del momento, y buscar cualquier pelicula que desees',
@@ -290,7 +297,7 @@ export const cv = {
       },
       {
          name: 'Sistema de Inventario',
-         img: '/src/assets/sistema-inventario.webp',
+         img: inventarioImg,
          isActive: true,
          description:
             'Sistema de inventario desarrollado para gestionar productos, categorías y proveedores, optimizando el control de stock y facilitando la administración de inventarios en pequeñas empresas',
@@ -307,7 +314,7 @@ export const cv = {
       },
       {
          name: 'Portafolio Web',
-         img: '/src/assets/portfolio.webp',
+         img: portfolioImg,
          isActive: false,
          description:
             'Portafolio web personal desarrollado para mostrar mis proyectos y habilidades, optimizando la presentación de mi trabajo y facilitando el contacto con potenciales clientes o empleadores',

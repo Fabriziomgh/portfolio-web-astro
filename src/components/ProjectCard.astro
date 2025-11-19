@@ -6,7 +6,7 @@ interface Props {
    name: string;
    isActive?: boolean;
    description: string;
-   img: string;
+   img: ImageMetadata;
    highlights: string[];
    github?: string | null;
    url?: string | null;
@@ -22,7 +22,7 @@ const { name, description, img, highlights, github, url, isActive } =
    <img
       loading="lazy"
       decoding="async"
-      src={img}
+      src={img.src}
       alt=""
       class="h-64 w-full object-cover transition duration-500 group-hover/proyecto:scale-105"
    />
