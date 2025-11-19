@@ -319,7 +319,7 @@ export const cv = {
          description:
             'Portafolio web personal desarrollado para mostrar mis proyectos y habilidades, optimizando la presentación de mi trabajo y facilitando el contacto con potenciales clientes o empleadores',
          highlights: ['Astro.js', 'tailwind', 'typescript'],
-         url: 'https://github.com/Fabriziomgh/portfolio-web-astro',
+         url: 'https://fabriziomgh.vercel.app/',
          github: 'https://github.com/Fabriziomgh/portfolio-web-astro',
       },
    ],
