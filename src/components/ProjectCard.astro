@@ -5,6 +5,7 @@ import Badge from './Badge.astro';
 interface Props {
    name: string;
    isActive?: boolean;
+   isPersonal?: boolean;
    description: string;
    img: ImageMetadata;
    highlights: string[];
@@ -12,8 +13,16 @@ interface Props {
    url?: string | null;
 }
 
-const { name, description, img, highlights, github, url, isActive } =
-   Astro.props;
+const {
+   name,
+   description,
+   img,
+   highlights,
+   github,
+   url,
+   isActive,
+   isPersonal,
+} = Astro.props;
 ---
 
 <div
@@ -35,18 +44,29 @@ const { name, description, img, highlights, github, url, isActive } =
             ))
          }
       </div>
-      <div class="flex items-center gap-x-2 mt-1.5">
-         <h3 class="text-md md:text-lg font-semibold text-primary">
-            {name}
-         </h3>
-         <Icon
-            name="circle"
-            size={9}
+      <div class="">
+         <div class="flex items-center gap-x-2">
+            <h3 class="text-md md:text-lg font-semibold text-primary">
+               {name}
+            </h3>
+            <Icon
+               name="circle"
+               size={9}
+               class:list={[
+                  { 'text-secondary': !isActive },
+                  { 'text-green-500': isActive },
+               ]}
+            />
+         </div>
+         <span
+            class="text-[10px] px-2 py-0.5 capitalize rounded-lg"
             class:list={[
-               { 'text-secondary': !isActive },
-               { 'text-green-500': isActive },
+               { 'bg-third/60 text-white': isPersonal },
+               { 'bg-primary text-background-card': !isPersonal },
             ]}
-         />
+         >
+            {isPersonal ? 'Personal' : 'Colaborador'}
+         </span>
       </div>
 
       <p class="mt-1.5 text-secondary text-[13px] transition-all">

@@ -4,6 +4,8 @@ import quizzImg from '@/assets/quizz.webp';
 import moviesAppImg from '@/assets/movies-app.webp';
 import inventarioImg from '@/assets/sistema-inventario.webp';
 import portfolioImg from '@/assets/portfolio.webp';
+import bessersolutionsImg from '@/assets/besser.webp';
+import consultorAgricolaImg from '@/assets/consultor.webp';
 
 export const cv = {
    basics: {
@@ -259,16 +261,30 @@ export const cv = {
          name: 'Sistema de gestión de expedientes',
          img: ineaImg,
          isActive: true,
+         isPersonal: false,
          description:
             'Sistema enfocado en la gestion de expedientes para los trabajadores del Instituto Nacional de los Espacios Acuáticos, optimizando los procesos internos del área de Recursos Humanos',
          highlights: ['react', 'tailwind', 'nodejs', 'mysql'],
          url: null,
          github: null,
       },
+
       {
          name: 'World Rank',
          img: worldRankImg,
          isActive: true,
+         isPersonal: true,
+         description:
+            'World Rank es una web que te permite ver todos los datos de un país en concreto, como tambien variedad de filtros para mostrar diferente información',
+         highlights: ['react', 'next', 'tailwind'],
+         url: 'https://world-rank-beta.vercel.app/',
+         github: 'https://github.com/Fabriziomgh/world-rank',
+      },
+      {
+         name: 'World Rank',
+         img: worldRankImg,
+         isActive: true,
+         isPersonal: true,
          description:
             'World Rank es una web que te permite ver todos los datos de un país en concreto, como tambien variedad de filtros para mostrar diferente información',
          highlights: ['react', 'next', 'tailwind'],
@@ -279,6 +295,7 @@ export const cv = {
          name: 'JS Quizz',
          img: quizzImg,
          isActive: true,
+         isPersonal: true,
          description:
             'JS Quiz es una aplicación web que permite a los usuarios responder preguntas y obtener su puntuación al final del cuestionario',
          highlights: ['react', 'zustand', 'material-ui'],
@@ -289,6 +306,7 @@ export const cv = {
          name: 'Movies App',
          img: moviesAppImg,
          isActive: false,
+         isPersonal: true,
          description:
             'Una pequeña app donde puedes ver las películas más populares del momento, y buscar cualquier pelicula que desees',
          highlights: ['react native', 'expo', 'typescript'],
@@ -299,6 +317,7 @@ export const cv = {
          name: 'Sistema de Inventario',
          img: inventarioImg,
          isActive: true,
+         isPersonal: false,
          description:
             'Sistema de inventario desarrollado para gestionar productos, categorías y proveedores, optimizando el control de stock y facilitando la administración de inventarios en pequeñas empresas',
          highlights: [
@@ -316,11 +335,34 @@ export const cv = {
          name: 'Portafolio Web',
          img: portfolioImg,
          isActive: true,
+         isPersonal: true,
          description:
             'Portafolio web personal desarrollado para mostrar mis proyectos y habilidades, optimizando la presentación de mi trabajo y facilitando el contacto con potenciales clientes o empleadores',
          highlights: ['Astro.js', 'tailwind', 'typescript'],
          url: 'https://fabriziomgh.vercel.app/',
          github: 'https://github.com/Fabriziomgh/portfolio-web-astro',
+      },
+      {
+         name: 'Besser Solutions Página Web',
+         img: bessersolutionsImg,
+         isActive: true,
+         isPersonal: false,
+         description:
+            'Página web para Besser Solutions, empresa dedicada a la conectividad de alta velocidad (fibra óptica y radiofibra) y soluciones tecnológicas para empresas y hogares',
+         highlights: ['astro', 'typescript', 'tailwindcss'],
+         url: 'https://bessersolutions.com/',
+         github: null,
+      },
+      {
+         name: 'Consultor Agrícola IA',
+         img: consultorAgricolaImg,
+         isActive: true,
+         isPersonal: false,
+         description:
+            'Aplicación web que funciona como consultor agrícola inteligente utilizando IA (Gemini) para analizar coordenadas y características del suelo',
+         highlights: ['react', 'gemini-ia', 'typescript'],
+         url: 'https://consultor-agricola-ia.netlify.app/',
+         github: null,
       },
    ],
 };
