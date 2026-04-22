@@ -108,6 +108,8 @@ const links = [
 
    window.addEventListener('scroll', updateNavbarBlur);
 
+   updateNavbarBlur();
+
    allMobileLinks.forEach((link) => {
       link.addEventListener('click', () => {
          menu?.classList.toggle('hidden');
